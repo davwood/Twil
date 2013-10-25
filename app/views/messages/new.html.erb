@@ -3,10 +3,10 @@
 
 <%= form_for @message do |m| %>
 
-	<%= m.label :countrycode, 'Country code' %>
-	<%= m.number_field :countrycode %>
+	<%= m.label :countrycode, 'Country code +' %>
+	<%= m.number_field :countrycode, :placeholder => "E.g. 1, 44" %>
 	<%= m.label :phonenumber, 'Phone number' %>
-	<%= m.text_field :phonenumber %>
+	<%= m.text_field :phonenumber, :placeholder => "Your phone number" %>
 	<%= m.label :message %>
 	<%= m.text_field :message %>
 	<%= m.submit 'Send' %>

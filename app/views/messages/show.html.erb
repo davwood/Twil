@@ -1,4 +1,7 @@
-<h2>Your messages</h2>
+<h2>Your message</h2>
 
-<p>@message.phonenumber</p>
-<p>@message.message</p>
+<p>To: <%= @message.phonenumber %></p>
+<p>Your message: <%= @message.message %></p>
+
+<%= link_to 'Send a new message', new_message_path, :class => "button" %>
+<%= link_to 'Show me all the messages', messages_path, :class => "button" %>

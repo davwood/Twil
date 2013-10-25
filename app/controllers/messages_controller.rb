@@ -12,7 +12,8 @@ class MessagesController < ApplicationController
 		@message = Message.new(params[:message].permit(:countrycode, :phonenumber, :message))
 
 		if @message.save
-			number = "+" << @message.phonenumber
+			countrycode = @message.countrycode.to_s
+			number = "+" << countrycode << @message.phonenumber
 			message = @message.message
 
 			@message.send_message(number,message)

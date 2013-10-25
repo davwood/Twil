@@ -1,5 +1,21 @@
-<h2>Message</h2>
+<% if current_user %>
 
+<h2>Your messages</h2>
+<ul>
 <% @messages.each do |message| %>
-	<%= messsage.message %>
+	<li><%= message.message %></li>
+<% end %>
+</ul>
+
+<a href='messages/new' class="button">Send a new message</a>
+
+<% else %>
+
+<h3>Welcome to Twilio</h3>
+
+<p> Let's get started! </p>
+
+<p> Are you read to start sending some text messages? </p>
+<a href='users/sign_up' class="button">Yes I am!</a>
+
 <% end %>

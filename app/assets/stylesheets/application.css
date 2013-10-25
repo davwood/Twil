@@ -8,6 +8,28 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require base
+ *= require skeleton
+ *= require layout
  *= require_self
  *= require_tree .
  */
+
+ 
+#nav {
+    margin: 13px 0 0 0;
+}
+ 
+#nav ul li {
+    display: inline;
+    margin: 0 20px 0 0;
+    margin-bottom: 130px;
+}
+ 
+#logo a, #nav a {
+    text-decoration: none;
+} 
+ 
+#nav a:hover {
+    text-decoration: underline;
+}

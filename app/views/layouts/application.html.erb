@@ -8,9 +8,33 @@
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
+	<header>
+		<div class="container">
+			<div id="logo" class="two columns">
+				<h3><a href='/'>TWIL</a></h3>
+	    	</div>
 
+	    	<div id="nav" class="fourteen columns">
+	   		<ul>
+				<% if current_user %>
+				<li><%= link_to 'Sign Out', destroy_user_session_path %></li>
+
+				<% else %>
+				<li><%= link_to 'Sign Up', new_user_registration_path %></li>
+				<li><%= link_to 'Sign In', new_user_session_path %></li>
+
+				<% end %>
+			</ul>
+			 </div>
+		</div>
+	</header>
+
+		<div class="container">
+
+			<p class="notice"><%= notice %></p>
+			<p class="alert"><%= alert %></p>
+			<%= yield %>
+		
+		</div>
 </body>
 </html>
