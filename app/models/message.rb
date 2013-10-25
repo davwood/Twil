@@ -1,4 +1,3 @@
-require 'twilio-ruby'
 
 class Message < ActiveRecord::Base
 
@@ -14,13 +13,11 @@ class Message < ActiveRecord::Base
 	 
 		from = "+441158243283" # Your Twilio number
 	 	
-		
 		  client.account.sms.messages.create(
 		    :from => from,
 		    :to => number,
 		    :body => message
 		  ) 
-	
 	end
 
 end
