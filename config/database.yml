@@ -58,5 +58,5 @@ production:
   encoding: unicode
   database: Twil_production
   pool: 5
-  username: Twil
+  username:
   password:
