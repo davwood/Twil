@@ -1,0 +1,18 @@
+<h2>New Message</h2>
+
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+
+<%= form_for @message do |m| %>
+
+	<%= m.label :countrycode, 'Country code' %>
+	<%= m.number_field :countrycode %>
+	<%= m.label :phonenumber, 'Phone number' %>
+	<%= m.number_field :phonenumber %>
+	<%= m.label :message %>
+	<%= m.text_field :message %>
+	<%= m.submit 'Send' %>
+
+<% end %>
