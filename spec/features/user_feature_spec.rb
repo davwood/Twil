@@ -3,8 +3,7 @@ require 'spec_helper'
 describe 'user' do 
 
 	it 'should be able to sign up' do
-		visit '/'
-		click_link 'Sign up'
+		visit new_user_registration_path
 
 		fill_in 'First name', with: "Bob"
 		fill_in 'Last name', with: "Smith"
@@ -18,7 +17,7 @@ describe 'user' do
 	end
 
 	it 'should be able to sign in' do
-		
+
 
 	end
 
